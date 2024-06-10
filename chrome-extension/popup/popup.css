@@ -1,0 +1,51 @@
+body {
+  background-color: #ffffff;
+  color: #000000;
+  font-family: Arial, sans-serif;
+  padding: 10px;
+  margin: 0;
+  width: 300px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+select, button {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #000000;
+  padding: 10px;
+  margin: 10px 0;
+  cursor: pointer;
+  width: 100%;
+}
+
+#generate-btn {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+}
+
+#generate-btn:hover {
+  background-color: #0056b3;
+}
+
+#card-info p {
+  margin: 5px 0;
+}
+
+.rating {
+  margin-top: 20px;
+}
+
+#rate-us span {
+  cursor: pointer;
+  font-size: 24px;
+}
+
+#rate-us span:hover {
+  color: #ffd700;
+}

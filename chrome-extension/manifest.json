@@ -1,13 +1,13 @@
 {
     "manifest_version": 3,
-    "name": "Credit Card Generator",
+    "name": "CC Generator By Mulsew M",
     "version": "1.0",
     "permissions": ["activeTab"],
     "action": {
-        "default_popup": "popup/popup.html",
-        "default_icon": "icons/icon.png"
+      "default_popup": "popup/popup.html",
+      "default_icon": "icons/icon.png"
     },
     "background": {
-        "service_worker": "background.js"
+      "service_worker": "background.js"
     }
-}
+  }
