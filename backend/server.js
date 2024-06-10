@@ -23,8 +23,8 @@ app.post('/generate-card', async (req, res) => {
         cardNumber: cardNumber || '4111-9659-3126-7598',
         cvv: cvv || '389',
         date: date || '06/26',
-        name: name || 'Teagan Considine',
-        zip: zip || '50307'
+        name: name || 'Mulsew M Tesfaye',
+        zip: zip || '10001'
     };
 
     try {
