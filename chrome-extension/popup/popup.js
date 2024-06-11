@@ -13,11 +13,11 @@ document.getElementById('generate-btn').addEventListener('click', async () => {
 
     const data = await response.json();
     document.getElementById('card-info').innerHTML = `
-      <p>Card number: ${data.cardNumber} <button onclick="copyToClipboard('${data.cardNumber}')">Copy</button></p>
-      <p>CVV: ${data.cvv} <button onclick="copyToClipboard('${data.cvv}')">Copy</button></p>
-      <p>Date: ${data.date}</p>
-      <p>Name: ${data.name}</p>
-      <p>Zip code: ${data.zip}</p>
+      <p><strong>Card number:</strong> ${data.cardNumber} <img src="../icons/copy.png" class="copy-icon" data-copy="${data.cardNumber}" /></p>
+      <p><strong>CVV:</strong> ${data.cvv} <img src="../icons/copy.png" class="copy-icon" data-copy="${data.cvv}" /></p>
+      <p><strong>Date:</strong> ${data.date}</p>
+      <p><strong>Name:</strong> ${data.name}</p>
+      <p><strong>Zip code:</strong> ${data.zip}</p>
     `;
   } catch (error) {
     document.getElementById('card-info').innerHTML = `<p style="color: red;">Error: ${error.message}</p>`;
@@ -27,6 +27,7 @@ document.getElementById('generate-btn').addEventListener('click', async () => {
 document.getElementById('rate-us').addEventListener('click', (e) => {
   const rating = e.target.getAttribute('data-value');
   if (rating) {
+    highlightStars(rating);
     if (rating >= 4) {
       window.location.href = 'https://www.google.com/';
     } else {
@@ -35,10 +36,28 @@ document.getElementById('rate-us').addEventListener('click', (e) => {
   }
 });
 
+document.getElementById('card-info').addEventListener('click', (e) => {
+  if (e.target.classList.contains('copy-icon')) {
+    const text = e.target.getAttribute('data-copy');
+    copyToClipboard(text);
+  }
+});
+
+function highlightStars(rating) {
+  const stars = document.querySelectorAll('#rate-us span');
+  stars.forEach((star, index) => {
+    if (index < rating) {
+      star.classList.add('highlighted');
+    } else {
+      star.classList.remove('highlighted');
+    }
+  });
+}
+
 function copyToClipboard(text) {
   navigator.clipboard.writeText(text).then(() => {
-    alert('Copied to clipboard');
+    alert('Copied ');
   }, (err) => {
-    alert('Failed to copy: ', err);
+    alert('Failed : ', err);
   });
 }

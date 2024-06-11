@@ -35,6 +35,15 @@ select, button {
 
 #card-info p {
   margin: 5px 0;
+  display: flex;
+  align-items: center;
+}
+
+.copy-icon {
+  width: 16px;
+  height: 16px;
+  margin-left: 10px;
+  cursor: pointer;
 }
 
 .rating {
@@ -44,8 +53,9 @@ select, button {
 #rate-us span {
   cursor: pointer;
   font-size: 24px;
+  color: #ddd;
 }
 
-#rate-us span:hover {
+#rate-us span.highlighted {
   color: #ffd700;
 }

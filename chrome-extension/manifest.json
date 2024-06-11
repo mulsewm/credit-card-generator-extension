@@ -1,13 +1,19 @@
 {
-    "manifest_version": 3,
-    "name": "CC Generator By Mulsew M",
-    "version": "1.0",
-    "permissions": ["activeTab"],
-    "action": {
-      "default_popup": "popup/popup.html",
-      "default_icon": "icons/icon.png"
-    },
-    "background": {
-      "service_worker": "background.js"
+  "manifest_version": 3,
+  "name": "CC Generator By Mulsew M",
+  "version": "1.0",
+  "permissions": ["activeTab"],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": "icons/icon.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["icons/copy.png"],
+      "matches": ["<all_urls>"]
     }
-  }
+  ]
+}
