@@ -1,719 +1,106 @@
 const addresses = [
-  {
-    "name": "John Doe",
-    "streetAddress": "123 Main St",
-    "city": "Springfield",
-    "state": "IL",
-    "zip": "62704"
-  },
-  {
-    "name": "Jane Smith",
-    "streetAddress": "456 Elm St",
-    "city": "Los Angeles",
-    "state": "CA",
-    "zip": "90001"
-  },
-  {
-    "name": "Alice Johnson",
-    "streetAddress": "789 Oak St",
-    "city": "Houston",
-    "state": "TX",
-    "zip": "77001"
-  },
-  {
-    "name": "Michael Brown",
-    "streetAddress": "101 Pine St",
-    "city": "Miami",
-    "state": "FL",
-    "zip": "33101"
-  },
-  {
-    "name": "Emily Davis",
-    "streetAddress": "202 Maple St",
-    "city": "Denver",
-    "state": "CO",
-    "zip": "80201"
-  },
-  {
-    "name": "David Wilson",
-    "streetAddress": "303 Birch St",
-    "city": "Chicago",
-    "state": "IL",
-    "zip": "60601"
-  },
-  {
-    "name": "Sarah Miller",
-    "streetAddress": "404 Cedar St",
-    "city": "New York",
-    "state": "NY",
-    "zip": "10001"
-  },
-  {
-    "name": "Christopher Garcia",
-    "streetAddress": "505 Spruce St",
-    "city": "Seattle",
-    "state": "WA",
-    "zip": "98101"
-  },
-  {
-    "name": "Jessica Martinez",
-    "streetAddress": "606 Fir St",
-    "city": "Austin",
-    "state": "TX",
-    "zip": "73301"
-  },
-  {
-    "name": "Matthew Anderson",
-    "streetAddress": "707 Redwood St",
-    "city": "San Francisco",
-    "state": "CA",
-    "zip": "94101"
-  },
-  {
-    "name": "Ashley Thomas",
-    "streetAddress": "808 Ash St",
-    "city": "Boston",
-    "state": "MA",
-    "zip": "02101"
-  },
-  {
-    "name": "Joshua Hernandez",
-    "streetAddress": "909 Cherry St",
-    "city": "Phoenix",
-    "state": "AZ",
-    "zip": "85001"
-  },
-  {
-    "name": "Amanda Moore",
-    "streetAddress": "1010 Walnut St",
-    "city": "Philadelphia",
-    "state": "PA",
-    "zip": "19101"
-  },
-  {
-    "name": "Daniel Jackson",
-    "streetAddress": "1111 Willow St",
-    "city": "Columbus",
-    "state": "OH",
-    "zip": "43201"
-  },
-  {
-    "name": "Megan White",
-    "streetAddress": "1212 Poplar St",
-    "city": "Charlotte",
-    "state": "NC",
-    "zip": "28201"
-  },
-  {
-    "name": "Andrew Harris",
-    "streetAddress": "1313 Cypress St",
-    "city": "Indianapolis",
-    "state": "IN",
-    "zip": "46201"
-  },
-  {
-    "name": "Hannah Lewis",
-    "streetAddress": "1414 Chestnut St",
-    "city": "Detroit",
-    "state": "MI",
-    "zip": "48201"
-  },
-  {
-    "name": "Brandon Clark",
-    "streetAddress": "1515 Hickory St",
-    "city": "Memphis",
-    "state": "TN",
-    "zip": "38101"
-  },
-  {
-    "name": "Samantha Robinson",
-    "streetAddress": "1616 Magnolia St",
-    "city": "Baltimore",
-    "state": "MD",
-    "zip": "21201"
-  },
-  {
-    "name": "James Lewis",
-    "streetAddress": "1717 Linden St",
-    "city": "Milwaukee",
-    "state": "WI",
-    "zip": "53201"
-  },
-  {
-    "name": "Olivia Walker",
-    "streetAddress": "1818 Aspen St",
-    "city": "Portland",
-    "state": "OR",
-    "zip": "97201"
-  },
-  {
-    "name": "Benjamin Hall",
-    "streetAddress": "1919 Redwood St",
-    "city": "San Diego",
-    "state": "CA",
-    "zip": "92101"
-  },
-  {
-    "name": "Natalie King",
-    "streetAddress": "2020 Cedar St",
-    "city": "Dallas",
-    "state": "TX",
-    "zip": "75201"
-  },
-  {
-    "name": "Ryan Wright",
-    "streetAddress": "2121 Birch St",
-    "city": "San Antonio",
-    "state": "TX",
-    "zip": "78201"
-  },
-  {
-    "name": "Sophia Lopez",
-    "streetAddress": "2222 Spruce St",
-    "city": "San Jose",
-    "state": "CA",
-    "zip": "95101"
-  },
-  {
-    "name": "Ethan Lee",
-    "streetAddress": "2323 Fir St",
-    "city": "Austin",
-    "state": "TX",
-    "zip": "73301"
-  },
-  {
-    "name": "Victoria Martinez",
-    "streetAddress": "2424 Ash St",
-    "city": "Fort Worth",
-    "state": "TX",
-    "zip": "76101"
-  },
-  {
-    "name": "Jacob Taylor",
-    "streetAddress": "2525 Pine St",
-    "city": "Jacksonville",
-    "state": "FL",
-    "zip": "32099"
-  },
-  {
-    "name": "Ava Anderson",
-    "streetAddress": "2626 Maple St",
-    "city": "San Francisco",
-    "state": "CA",
-    "zip": "94101"
-  },
-  {
-    "name": "Noah Hernandez",
-    "streetAddress": "2727 Redwood St",
-    "city": "San Antonio",
-    "state": "TX",
-    "zip": "78201"
-  },
-  {
-    "name": "Mia Brown",
-    "streetAddress": "2828 Cedar St",
-    "city": "Phoenix",
-    "state": "AZ",
-    "zip": "85001"
-  },
-  {
-    "name": "William Thomas",
-    "streetAddress": "2929 Birch St",
-    "city": "Houston",
-    "state": "TX",
-    "zip": "77001"
-  },
-  {
-    "name": "Emma Davis",
-    "streetAddress": "3030 Spruce St",
-    "city": "Chicago",
-    "state": "IL",
-    "zip": "60601"
-  },
-  {
-    "name": "Alexander Wilson",
-    "streetAddress": "3131 Fir St",
-    "city": "San Diego",
-    "state": "CA",
-    "zip": "92101"
-  },
-  {
-    "name": "Isabella Martinez",
-    "streetAddress": "3232 Ash St",
-    "city": "Dallas",
-    "state": "TX",
-    "zip": "75201"
-  },
-  {
-    "name": "Lucas Robinson",
-    "streetAddress": "3333 Pine St",
-    "city": "Austin",
-    "state": "TX",
-    "zip": "73301"
-  },
-  {
-    "name": "Charlotte Clark",
-    "streetAddress": "3434 Maple St",
-    "city": "San Jose",
-    "state": "CA",
-    "zip": "95101"
-  },
-  {
-    "name": "Elijah Lewis",
-    "streetAddress": "3535 Redwood St",
-    "city": "San Antonio",
-    "state": "TX",
-    "zip": "78201"
-  },
-  {
-    "name": "Amelia Hall",
-    "streetAddress": "3636 Cedar St",
-    "city": "Phoenix",
-    "state": "AZ",
-    "zip": "85001"
-  },
-  {
-    "name": "Henry Walker",
-    "streetAddress": "3737 Birch St",
-    "city": "Los Angeles",
-    "state": "CA",
-    "zip": "90001"
-  },
-  {
-    "name": "Grace King",
-    "streetAddress": "3838 Spruce St",
-    "city": "San Francisco",
-    "state": "CA",
-    "zip": "94101"
-  },
-  {
-    "name": "Sebastian Wright",
-    "streetAddress": "3939 Fir St",
-    "city": "Houston",
-    "state": "TX",
-    "zip": "77001"
-  },
-  {
-    "name": "Zoe Martinez",
-    "streetAddress": "4040 Ash St",
-    "city": "Chicago",
-    "state": "IL",
-    "zip": "60601"
-  },
-  {
-    "name": "Liam Lee",
-    "streetAddress": "4141 Pine St",
-    "city": "Philadelphia",
-    "state": "PA",
-    "zip": "19101"
-  },
-  {
-    "name": "Harper Hernandez",
-    "streetAddress": "4242 Maple St",
-    "city": "Phoenix",
-    "state": "AZ",
-    "zip": "85001"
-  },
-  {
-    "name": "Daniel Garcia",
-    "streetAddress": "4343 Redwood St",
-    "city": "Dallas",
-    "state": "TX",
-    "zip": "75201"
-  },
-  {
-    "name": "Ella Clark",
-    "streetAddress": "4444 Cedar St",
-    "city": "San Diego",
-    "state": "CA",
-    "zip": "92101"
-  },
-  {
-    "name": "James Anderson",
-    "streetAddress": "4545 Birch St",
-    "city": "San Francisco",
-    "state": "CA",
-    "zip": "94101"
-  },
-  {
-    "name": "Sofia Miller",
-    "streetAddress": "4646 Spruce St",
-    "city": "Los Angeles",
-    "state": "CA",
-    "zip": "90001"
-  },
-  {
-    "name": "Aiden Wilson",
-    "streetAddress": "4747 Fir St",
-    "city": "Houston",
-    "state": "TX",
-    "zip": "77001"
-  },
-  {
-    "name": "Aubrey Davis",
-    "streetAddress": "4848 Ash St",
-    "city": "Chicago",
-    "state": "IL",
-    "zip": "60601"
-  },
-  {
-    "name": "Logan Thomas",
-    "streetAddress": "4949 Pine St",
-    "city": "Dallas",
-    "state": "TX",
-    "zip": "75201"
-  },
-  {
-    "name": "Layla Johnson",
-    "streetAddress": "5050 Maple St",
-    "city": "Phoenix",
-    "state": "AZ",
-    "zip": "85001"
-  },
-  {
-    "name": "Carter Brown",
-    "streetAddress": "5151 Redwood St",
-    "city": "San Francisco",
-    "state": "CA",
-    "zip": "94101"
-  },
-  {
-    "name": "Avery Lewis",
-    "streetAddress": "5252 Cedar St",
-    "city": "Houston",
-    "state": "TX",
-    "zip": "77001"
-  },
-  {
-    "name": "Jayden Lee",
-    "streetAddress": "5353 Birch St",
-    "city": "Los Angeles",
-    "state": "CA",
-    "zip": "90001"
-  },
-  {
-    "name": "Scarlett Walker",
-    "streetAddress": "5454 Spruce St",
-    "city": "San Diego",
-    "state": "CA",
-    "zip": "92101"
-  },
-  {
-    "name": "Julian Martinez",
-    "streetAddress": "5555 Fir St",
-    "city": "San Francisco",
-    "state": "CA",
-    "zip": "94101"
-  },
-  {
-    "name": "Brooklyn Anderson",
-    "streetAddress": "5656 Ash St",
-    "city": "Phoenix",
-    "state": "AZ",
-    "zip": "85001"
-  },
-  {
-    "name": "Evelyn Thomas",
-    "streetAddress": "5757 Pine St",
-    "city": "Houston",
-    "state": "TX",
-    "zip": "77001"
-  },
-  {
-    "name": "Owen Harris",
-    "streetAddress": "5858 Maple St",
-    "city": "Chicago",
-    "state": "IL",
-    "zip": "60601"
-  },
-  {
-    "name": "Hannah Wilson",
-    "streetAddress": "5959 Redwood St",
-    "city": "Dallas",
-    "state": "TX",
-    "zip": "75201"
-  },
-  {
-    "name": "Jack Martinez",
-    "streetAddress": "6060 Cedar St",
-    "city": "San Diego",
-    "state": "CA",
-    "zip": "92101"
-  },
-  {
-    "name": "Mila Johnson",
-    "streetAddress": "6161 Birch St",
-    "city": "Phoenix",
-    "state": "AZ",
-    "zip": "85001"
-  },
-  {
-    "name": "Luke Lewis",
-    "streetAddress": "6262 Spruce St",
-    "city": "Houston",
-    "state": "TX",
-    "zip": "77001"
-  },
-  {
-    "name": "Chloe Hernandez",
-    "streetAddress": "6363 Fir St",
-    "city": "Los Angeles",
-    "state": "CA",
-    "zip": "90001"
-  },
-  {
-    "name": "David Garcia",
-    "streetAddress": "6464 Ash St",
-    "city": "Chicago",
-    "state": "IL",
-    "zip": "60601"
-  },
-  {
-    "name": "Zoe Anderson",
-    "streetAddress": "6565 Pine St",
-    "city": "San Francisco",
-    "state": "CA",
-    "zip": "94101"
-  },
-  {
-    "name": "Jackson Thomas",
-    "streetAddress": "6666 Maple St",
-    "city": "Phoenix",
-    "state": "AZ",
-    "zip": "85001"
-  },
-  {
-    "name": "Addison Lee",
-    "streetAddress": "6767 Redwood St",
-    "city": "Houston",
-    "state": "TX",
-    "zip": "77001"
-  },
-  {
-    "name": "Michael Walker",
-    "streetAddress": "6868 Cedar St",
-    "city": "Los Angeles",
-    "state": "CA",
-    "zip": "90001"
-  },
-  {
-    "name": "Ellie Martinez",
-    "streetAddress": "6969 Birch St",
-    "city": "Chicago",
-    "state": "IL",
-    "zip": "60601"
-  },
-  {
-    "name": "Levi Davis",
-    "streetAddress": "7070 Spruce St",
-    "city": "San Francisco",
-    "state": "CA",
-    "zip": "94101"
-  },
-  {
-    "name": "Willow Brown",
-    "streetAddress": "7171 Fir St",
-    "city": "Phoenix",
-    "state": "AZ",
-    "zip": "85001"
-  },
-  {
-    "name": "Aiden Martinez",
-    "streetAddress": "7272 Ash St",
-    "city": "Houston",
-    "state": "TX",
-    "zip": "77001"
-  },
-  {
-    "name": "Sophia Lee",
-    "streetAddress": "7373 Pine St",
-    "city": "Los Angeles",
-    "state": "CA",
-    "zip": "90001"
-  },
-  {
-    "name": "Logan Hernandez",
-    "streetAddress": "7474 Maple St",
-    "city": "Chicago",
-    "state": "IL",
-    "zip": "60601"
-  },
-  {
-    "name": "Lily Johnson",
-    "streetAddress": "7575 Redwood St",
-    "city": "San Francisco",
-    "state": "CA",
-    "zip": "94101"
-  },
-  {
-    "name": "Lucas Wilson",
-    "streetAddress": "7676 Cedar St",
-    "city": "Phoenix",
-    "state": "AZ",
-    "zip": "85001"
-  },
-  {
-    "name": "Mason Davis",
-    "streetAddress": "7777 Birch St",
-    "city": "Houston",
-    "state": "TX",
-    "zip": "77001"
-  },
-  {
-    "name": "Stella Anderson",
-    "streetAddress": "7878 Spruce St",
-    "city": "Los Angeles",
-    "state": "CA",
-    "zip": "90001"
-  },
-  {
-    "name": "Ethan Thomas",
-    "streetAddress": "7979 Fir St",
-    "city": "Chicago",
-    "state": "IL",
-    "zip": "60601"
-  },
-  {
-    "name": "Charlotte Hernandez",
-    "streetAddress": "8080 Ash St",
-    "city": "San Francisco",
-    "state": "CA",
-    "zip": "94101"
-  },
-  {
-    "name": "Alexander Walker",
-    "streetAddress": "8181 Pine St",
-    "city": "Phoenix",
-    "state": "AZ",
-    "zip": "85001"
-  },
-  {
-    "name": "Riley Martinez",
-    "streetAddress": "8282 Maple St",
-    "city": "Houston",
-    "state": "TX",
-    "zip": "77001"
-  },
-  {
-    "name": "Daniel Lewis",
-    "streetAddress": "8383 Redwood St",
-    "city": "Los Angeles",
-    "state": "CA",
-    "zip": "90001"
-  },
-  {
-    "name": "Aurora Johnson",
-    "streetAddress": "8484 Cedar St",
-    "city": "Chicago",
-    "state": "IL",
-    "zip": "60601"
-  },
-  {
-    "name": "Oliver Brown",
-    "streetAddress": "8585 Birch St",
-    "city": "San Francisco",
-    "state": "CA",
-    "zip": "94101"
-  },
-  {
-    "name": "Hazel Martinez",
-    "streetAddress": "8686 Spruce St",
-    "city": "Phoenix",
-    "state": "AZ",
-    "zip": "85001"
-  },
-  {
-    "name": "Lucas Hernandez",
-    "streetAddress": "8787 Fir St",
-    "city": "Houston",
-    "state": "TX",
-    "zip": "77001"
-  },
-  {
-    "name": "Grace Walker",
-    "streetAddress": "8888 Ash St",
-    "city": "Los Angeles",
-    "state": "CA",
-    "zip": "90001"
-  },
-  {
-    "name": "Benjamin Thomas",
-    "streetAddress": "8989 Pine St",
-    "city": "Chicago",
-    "state": "IL",
-    "zip": "60601"
-  },
-  {
-    "name": "Levi Lewis",
-    "streetAddress": "9090 Maple St",
-    "city": "San Francisco",
-    "state": "CA",
-    "zip": "94101"
-  },
-  {
-    "name": "Mila Davis",
-    "streetAddress": "9191 Redwood St",
-    "city": "Phoenix",
-    "state": "AZ",
-    "zip": "85001"
-  },
-  {
-    "name": "Elijah Martinez",
-    "streetAddress": "9292 Cedar St",
-    "city": "Houston",
-    "state": "TX",
-    "zip": "77001"
-  },
-  {
-    "name": "Emma Walker",
-    "streetAddress": "9393 Birch St",
-    "city": "Los Angeles",
-    "state": "CA",
-    "zip": "90001"
-  },
-  {
-    "name": "Henry Johnson",
-    "streetAddress": "9494 Spruce St",
-    "city": "Chicago",
-    "state": "IL",
-    "zip": "60601"
-  },
-  {
-    "name": "Ella Hernandez",
-    "streetAddress": "9595 Fir St",
-    "city": "San Francisco",
-    "state": "CA",
-    "zip": "94101"
-  },
-  {
-    "name": "Carter Brown",
-    "streetAddress": "9696 Ash St",
-    "city": "Phoenix",
-    "state": "AZ",
-    "zip": "85001"
-  },
-  {
-    "name": "Harper Martinez",
-    "streetAddress": "9797 Pine St",
-    "city": "Houston",
-    "state": "TX",
-    "zip": "77001"
-  },
-  {
-    "name": "Liam Thomas",
-    "streetAddress": "9898 Maple St",
-    "city": "Los Angeles",
-    "state": "CA",
-    "zip": "90001"
-  },
-  {
-    "name": "Sofia Walker",
-    "streetAddress": "9999 Redwood St",
-    "city": "Chicago",
-    "state": "IL",
-    "zip": "60601"
-  }
+  "123 Maple St, Springfield, IL 62701",
+  "456 Oak Ave, Denver, CO 80202",
+  "789 Pine Blvd, Seattle, WA 98101",
+  "101 Cedar Ln, Austin, TX 73301",
+  "202 Birch Dr, Miami, FL 33101",
+  "303 Walnut St, Atlanta, GA 30301",
+  "404 Elm St, Boston, MA 02101",
+  "505 Ash St, San Francisco, CA 94101",
+  "606 Cherry Ave, Chicago, IL 60601",
+  "707 Redwood Rd, Portland, OR 97201",
+  "808 Poplar St, New York, NY 10001",
+  "909 Sycamore Ln, Las Vegas, NV 89101",
+  "111 Hickory St, Houston, TX 77001",
+  "222 Spruce Ave, Philadelphia, PA 19101",
+  "333 Fir Dr, Phoenix, AZ 85001",
+  "444 Willow Blvd, Dallas, TX 75201",
+  "555 Magnolia St, San Diego, CA 92101",
+  "666 Cypress Ln, Orlando, FL 32801",
+  "777 Dogwood Dr, Columbus, OH 43201",
+  "888 Sequoia Ave, Nashville, TN 37201",
+  "999 Cedar St, Charlotte, NC 28201",
+  "123 Pine Ln, Minneapolis, MN 55401",
+  "234 Maple Dr, St. Louis, MO 63101",
+  "345 Oak St, San Jose, CA 95101",
+  "456 Birch Ave, Detroit, MI 48201",
+  "567 Walnut Dr, Baltimore, MD 21201",
+  "678 Elm St, Milwaukee, WI 53201",
+  "789 Cherry Ln, Albuquerque, NM 87101",
+  "890 Redwood Blvd, Kansas City, MO 64101",
+  "901 Sycamore Ave, Indianapolis, IN 46201",
+  "1010 Hickory Dr, Memphis, TN 38101",
+  "1111 Spruce St, Louisville, KY 40201",
+  "1212 Fir Ln, New Orleans, LA 70101",
+  "1313 Willow Dr, Salt Lake City, UT 84101",
+  "1414 Magnolia Ave, Oklahoma City, OK 73101",
+  "1515 Cypress Blvd, Richmond, VA 23201",
+  "1616 Dogwood St, Birmingham, AL 35201",
+  "1717 Sequoia Dr, Providence, RI 02901",
+  "1818 Cedar Ave, Hartford, CT 06101",
+  "1919 Pine St, Buffalo, NY 14201",
+  "2020 Maple Ln, Des Moines, IA 50301",
+  "2121 Oak Dr, Anchorage, AK 99501",
+  "2222 Birch St, Honolulu, HI 96801",
+  "2323 Walnut Ln, Boise, ID 83701",
+  "2424 Elm Ave, Little Rock, AR 72201",
+  "2525 Cherry Dr, Jackson, MS 39201",
+  "2626 Redwood St, Charleston, WV 25301",
+  "2727 Sycamore Ln, Cheyenne, WY 82001",
+  "2828 Hickory Blvd, Dover, DE 19901",
+  "2929 Spruce Dr, Montpelier, VT 05601",
+  "3030 Fir Ave, Concord, NH 03301",
+  "3131 Willow Ln, Pierre, SD 57501",
+  "3232 Magnolia Dr, Helena, MT 59601",
+  "3333 Cypress Ave, Bismarck, ND 58501",
+  "3434 Dogwood Blvd, Augusta, ME 04330",
+  "3535 Sequoia Ln, Madison, WI 53701",
+  "3636 Cedar Dr, Olympia, WA 98501",
+  "3737 Pine Ave, Jefferson City, MO 65101",
+  "3838 Maple St, Harrisburg, PA 17101",
+  "3939 Oak Ln, Frankfort, KY 40601",
+  "4040 Birch Dr, Lansing, MI 48901",
+  "4141 Walnut Ave, Columbus, GA 31901",
+  "4242 Elm Ln, Baton Rouge, LA 70801",
+  "4343 Cherry Dr, Santa Fe, NM 87501",
+  "4444 Redwood St, Raleigh, NC 27601",
+  "4545 Sycamore Ave, Lincoln, NE 68501",
+  "4646 Hickory Ln, Concord, NH 03301",
+  "4747 Spruce Ave, Fargo, ND 58102",
+  "4848 Fir Dr, Topeka, KS 66601",
+  "4949 Willow Ln, Boise, ID 83701",
+  "5050 Magnolia Blvd, Salt Lake City, UT 84101",
+  "5151 Cypress Ave, Trenton, NJ 08601",
+  "5252 Dogwood Ln, Columbia, SC 29201",
+  "5353 Sequoia Dr, Charleston, SC 29401",
+  "5454 Cedar Ave, Hartford, CT 06101",
+  "5555 Pine St, Augusta, GA 30901",
+  "5656 Maple Ln, Salem, OR 97301",
+  "5757 Oak Dr, Annapolis, MD 21401",
+  "5858 Birch St, Montgomery, AL 36101",
+  "5959 Walnut Ave, Tallahassee, FL 32301",
+  "6060 Elm Ln, Denver, CO 80202",
+  "6161 Cherry Dr, Atlanta, GA 30301",
+  "6262 Redwood Ave, Boise, ID 83701",
+  "6363 Sycamore Blvd, Raleigh, NC 27601",
+  "6464 Hickory St, Portland, OR 97201",
+  "6565 Spruce Ave, Richmond, VA 23201",
+  "6666 Fir Dr, Columbus, OH 43201",
+  "6767 Willow Blvd, Indianapolis, IN 46201",
+  "6868 Magnolia Ln, Las Vegas, NV 89101",
+  "6969 Cypress Ave, New Orleans, LA 70101",
+  "7070 Dogwood Blvd, Oklahoma City, OK 73101",
+  "7171 Sequoia Ln, Miami, FL 33101",
+  "7272 Cedar Ave, Phoenix, AZ 85001",
+  "7373 Pine Blvd, Kansas City, MO 64101",
+  "7474 Maple Dr, Austin, TX 73301",
+  "7575 Oak St, San Francisco, CA 94101",
+  "7676 Birch Ln, Chicago, IL 60601",
+  "7777 Walnut Dr, Houston, TX 77001",
+  "7878 Elm Ave, Los Angeles, CA 90001",
+  "7979 Cherry Blvd, Philadelphia, PA 19101"
 ];
+
 document.addEventListener('DOMContentLoaded', () => {
   // Load saved card details from local storage
   const savedCardDetails = JSON.parse(localStorage.getItem('cardDetails'));
@@ -728,21 +115,15 @@ document.addEventListener('DOMContentLoaded', () => {
     displayCardDetails(cardDetails);
   });
 
-  document.getElementById('rate-us').addEventListener('mouseover', (e) => {
-    if (e.target.dataset.value) {
-      highlightStars(e.target.dataset.value);
-    }
+  document.getElementById('rate-us').addEventListener('mouseout', () => {
+    resetStars();
   });
 
   document.getElementById('rate-us').addEventListener('click', (e) => {
     const rating = e.target.getAttribute('data-value');
     if (rating) {
-      if (rating >= 4) {
-        window.location.href = 'https://www.google.com/';
-      } else {
-        window.location.href = 'https://www.youtube.com/hashtag/funnyvideo';
-      }
-      // Hide the rating widget forever
+      const url = rating >= 4 ? 'https://www.google.com/' : 'https://www.youtube.com/hashtag/funnyvideo';
+      window.open(url, '_blank');
       document.querySelector('.rating').style.display = 'none';
       localStorage.setItem('hideRating', 'true');
     }
@@ -770,15 +151,16 @@ document.addEventListener('DOMContentLoaded', () => {
       <p><strong>Zip code:</strong> <span>${cardDetails.zip}</span> <img src="../icons/copy-icon.png" class="copy-icon" data-copy="${cardDetails.zip}" /></p>
     `;
   }
-
   function highlightStars(rating) {
     const stars = document.querySelectorAll('#rate-us span');
     stars.forEach((star, index) => {
-      if (index < rating) {
-        star.classList.add('highlighted');
-      } else {
-        star.classList.remove('highlighted');
-      }
+      star.classList.toggle('highlighted', index < rating);
+    });
+  }
+  function resetStars() {
+    const stars = document.querySelectorAll('#rate-us span');
+    stars.forEach(star => {
+      star.classList.remove('highlighted');
     });
   }
 
@@ -804,17 +186,25 @@ document.addEventListener('DOMContentLoaded', () => {
     const cvv = String(Math.floor(100 + Math.random() * 900));
     const expiryDate = `${String(Math.floor(1 + Math.random() * 12)).padStart(2, '0')}/${String(Math.floor(24 + Math.random() * 6))}`;
     const address = addresses[Math.floor(Math.random() * addresses.length)];
+    const zip = address.split(', ').pop().split(' ').pop(); // Extracts only the zip code, ensuring it's the last numeric part
 
     return {
       cardNumber,
       cvv,
       expiryDate,
-      name: address.name,
-      streetAddress: address.streetAddress,
-      city: address.city,
-      state: address.state,
-      zip: address.zip,
-      country: 'USA'
+      name: `John Miller`, // Placeholder name, replace if necessary
+      streetAddress: address,
+      country: 'USA',
+      zip: zip
     };
   }
+});
+
+document.querySelectorAll('#rate-us span').forEach((star) => {
+  star.addEventListener('mouseover', () => {
+    highlightStars(star.getAttribute('data-value'));
+  });
+  star.addEventListener('mouseout', () => {
+    resetStars();
+  });
 });

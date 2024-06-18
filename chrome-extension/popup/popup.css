@@ -58,13 +58,13 @@ select, button {
 #rate-us span {
   cursor: pointer;
   font-size: 24px;
-  color: #ddd;
+  color: #ffd700;
 }
 
 #rate-us span.highlighted,
 #rate-us span:hover,
 #rate-us span:hover ~ span {
-  color: #ffd700;
+  color: #ddd;
 }
 
 .quick-start-icon {
