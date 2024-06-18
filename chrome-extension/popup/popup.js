@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.getElementById('generate-btn').addEventListener('click', () => {
     const cardType = document.getElementById('card-type').value;
-    const cardDetails = generateCardDetails(cardType);
+    const cardDetails = generateValidCardDetails(cardType);
     localStorage.setItem('cardDetails', JSON.stringify(cardDetails));
     displayCardDetails(cardDetails);
   });
@@ -175,19 +175,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  function generateCardDetails(cardType) {
+  function generateValidCardDetails(cardType) {
     const cardPrefixes = {
       'Visa': '4',
       'Mastercard': '5',
       'American Express': '3'
     };
     const prefix = cardPrefixes[cardType] || '4';
-    const cardNumber = prefix + Array.from({ length: 15 }, () => Math.floor(Math.random() * 10)).join('');
+    let cardNumber;
+  
+    do {
+      cardNumber = prefix + Array.from({ length: 15 }, () => Math.floor(Math.random() * 10)).join('');
+    } while (!isValidCardNumber(cardNumber));
+  
     const cvv = String(Math.floor(100 + Math.random() * 900));
     const expiryDate = `${String(Math.floor(1 + Math.random() * 12)).padStart(2, '0')}/${String(Math.floor(24 + Math.random() * 6))}`;
     const address = addresses[Math.floor(Math.random() * addresses.length)];
     const zip = address.split(', ').pop().split(' ').pop(); // Extracts only the zip code, ensuring it's the last numeric part
-
+  
     return {
       cardNumber,
       cvv,
@@ -197,6 +202,27 @@ document.addEventListener('DOMContentLoaded', () => {
       country: 'USA',
       zip: zip
     };
+  }
+  
+  function isValidCardNumber(cardNumber) {
+    let sum = 0;
+    let isEven = false;
+  
+    for (let i = cardNumber.length - 1; i >= 0; i--) {
+      let digit = parseInt(cardNumber[i]);
+  
+      if (isEven) {
+        digit *= 2;
+        if (digit > 9) {
+          digit -= 9;
+        }
+      }
+  
+      sum += digit;
+      isEven = !isEven;
+    }
+  
+    return sum % 10 === 0;
   }
 });
 
