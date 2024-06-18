@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "CC Generator By Mulsew M",
+  "name": "Credit Card Generator",
   "version": "1.0",
   "permissions": ["activeTab"],
   "action": {
@@ -12,7 +12,7 @@
   },
   "web_accessible_resources": [
     {
-      "resources": ["icons/copy.png"],
+      "resources": ["icons/copy.png", "icons/checkpng"],
       "matches": ["<all_urls>"]
     }
   ]

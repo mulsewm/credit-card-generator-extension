@@ -56,6 +56,8 @@ select, button {
   color: #ddd;
 }
 
-#rate-us span.highlighted {
+#rate-us span.highlighted,
+#rate-us span:hover,
+#rate-us span:hover ~ span {
   color: #ffd700;
 }
