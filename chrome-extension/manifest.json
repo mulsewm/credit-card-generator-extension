@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Credit Card Generator",
   "version": "1.0",
-  "permissions": ["activeTab"],
+  "permissions": [],
   "action": {
     "default_popup": "popup/popup.html",
     "default_icon": "icons/icon.png"
@@ -12,7 +12,7 @@
   },
   "web_accessible_resources": [
     {
-      "resources": ["icons/copy.png", "icons/checkpng"],
+      "resources": ["icons/copy-icon.png", "icons/check-icon.png", "icons/question.png"],
       "matches": ["<all_urls>"]
     }
   ]

@@ -1,6 +1,6 @@
 body {
-  background-color: #ffffff;
-  color: #000000;
+  background-color: #2c2c2c;
+  color: #ffffff;
   font-family: Arial, sans-serif;
   padding: 10px;
   margin: 0;
@@ -14,9 +14,9 @@ body {
 }
 
 select, button {
-  background-color: #ffffff;
-  color: #000000;
-  border: 1px solid #000000;
+  background-color: #3c3c3c;
+  color: #ffffff;
+  border: 1px solid #ffffff;
   padding: 10px;
   margin: 10px 0;
   cursor: pointer;
@@ -37,6 +37,11 @@ select, button {
   margin: 5px 0;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+}
+
+#card-info p strong {
+  margin-right: 10px;
 }
 
 .copy-icon {
@@ -60,4 +65,11 @@ select, button {
 #rate-us span:hover,
 #rate-us span:hover ~ span {
   color: #ffd700;
+}
+
+.quick-start-icon {
+  width: 54px;
+  height: 54px;
+  margin-top: 20px;
+  cursor: pointer;
 }
